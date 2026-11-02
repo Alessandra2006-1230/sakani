@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakani - Design Mockup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mockup-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">&#127793;</span>
+        <div>
+          <h1>Sakani</h1>
+          <p>Track &middot; Save &middot; Grow</p>
+        </div>
+      </div>
+      <nav>
+        <a class="active" href="#">Dashboard</a>
+        <a href="#">Add Transaction</a>
+        <a href="#">History Transactions</a>
+        <a href="#">Financial Summary</a>
+      </nav>
+      <div class="sidebar-footer">
+        <span>Signed in as</span>
+        <strong>Juan Dela Cruz</strong>
+        <a class="logout" href="#">Log Out</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="page-header">
+        <h2>Welcome back, Juan &#127806;</h2>
+        <p>Here is how your farm is doing today.</p>
+      </header>
+
+      <section class="stats">
+        <article class="card">
+          <span>Total Income</span>
+          <strong class="income">&#8369;125,400.00</strong>
+        </article>
+        <article class="card">
+          <span>Total Expenses</span>
+          <strong class="expense">&#8369;58,250.00</strong>
+        </article>
+        <article class="card">
+          <span>Net Income</span>
+          <strong>&#8369;67,150.00</strong>
+        </article>
+        <article class="card">
+          <span>Total Transactions</span>
+          <strong>24</strong>
+        </article>
+      </section>
+
+      <section class="panel-grid">
+        <article class="card chart-card">
+          <h3>Income vs Expenses</h3>
+          <div class="chart-bars">
+            <div class="bar-group"><span style="height:55%"></span><span class="red" style="height:30%"></span></div>
+            <div class="bar-group"><span style="height:70%"></span><span class="red" style="height:35%"></span></div>
+            <div class="bar-group"><span style="height:45%"></span><span class="red" style="height:50%"></span></div>
+            <div class="bar-group"><span style="height:80%"></span><span class="red" style="height:40%"></span></div>
+            <div class="bar-group"><span style="height:60%"></span><span class="red" style="height:25%"></span></div>
+            <div class="bar-group"><span style="height:90%"></span><span class="red" style="height:55%"></span></div>
+          </div>
+          <div class="legend">
+            <span><i class="dot green"></i>Income</span>
+            <span><i class="dot red"></i>Expense</span>
+          </div>
+        </article>
+
+        <article class="card recent-card">
+          <h3>Recent Transactions</h3>
+          <ul>
+            <li><span>Oct 24 &middot; Crop Sales</span><strong class="income">&#8369;8,500.00</strong></li>
+            <li><span>Oct 22 &middot; Fertilizer</span><strong class="expense">&#8369;2,300.00</strong></li>
+            <li><span>Oct 20 &middot; Labor</span><strong class="expense">&#8369;1,800.00</strong></li>
+            <li><span>Oct 18 &middot; Harvest Income</span><strong class="income">&#8369;12,000.00</strong></li>
+            <li><span>Oct 15 &middot; Seeds</span><strong class="expense">&#8369;950.00</strong></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="auth-preview">
+        <article class="auth-card">
+          <h3>Log In</h3>
+          <label>Email address</label>
+          <input type="email" placeholder="farmer@example.com">
+          <label>Password</label>
+          <input type="password" placeholder="********">
+          <button type="button">Log In</button>
+          <p class="link">Don't have an account? <a href="#">Sign Up</a></p>
+        </article>
+        <article class="auth-card">
+          <h3>Create Account</h3>
+          <label>Full name</label>
+          <input type="text" placeholder="Juan Dela Cruz">
+          <label>Email address</label>
+          <input type="email" placeholder="farmer@example.com">
+          <label>Password</label>
+          <input type="password" placeholder="********">
+          <button type="button">Create Account</button>
+          <p class="link">Already have an account? <a href="#">Log In</a></p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

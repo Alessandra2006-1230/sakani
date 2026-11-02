@@ -1,0 +1,154 @@
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --accent: #a5d6a7;
+  --background: #f1f8e9;
+  --card: #ffffff;
+  --text: #1f2d1f;
+  --muted: #5f6b5f;
+  --expense: #c62828;
+  --border: #dde7dd;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.mockup-shell { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 232px;
+  background: var(--primary-dark);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+
+.brand { display: flex; gap: 10px; align-items: center; margin-bottom: 28px; }
+.brand .logo { font-size: 28px; }
+.brand h1 { font-size: 22px; }
+.brand p { color: var(--accent); font-size: 12px; margin-top: 2px; }
+
+.sidebar nav { display: flex; flex-direction: column; gap: 4px; }
+.sidebar nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.sidebar nav a:hover { background: #245c27; color: #fff; }
+.sidebar nav a.active { background: var(--primary); color: #fff; }
+
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--primary);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13px;
+}
+.sidebar-footer span { color: var(--accent); font-size: 11px; }
+.sidebar-footer .logout {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 9px 0;
+  margin-top: 8px;
+}
+
+.content { flex: 1; padding: 26px 30px; }
+.page-header h2 { font-size: 24px; }
+.page-header p { color: var(--muted); font-size: 14px; margin: 4px 0 18px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.card > span { color: var(--muted); font-size: 12px; }
+.card > strong { display: block; font-size: 20px; margin-top: 6px; }
+.income { color: var(--primary); }
+.expense { color: var(--expense); }
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.chart-card h3, .recent-card h3, .auth-card h3 { font-size: 15px; margin-bottom: 14px; }
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 210px;
+  border-bottom: 1px solid var(--border);
+  padding: 0 6px;
+}
+.bar-group { display: flex; align-items: flex-end; gap: 3px; flex: 1; height: 100%; }
+.bar-group span {
+  flex: 1;
+  background: var(--primary);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+}
+.bar-group span.red { background: var(--expense); }
+
+.legend { display: flex; gap: 18px; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; }
+.dot.green { background: var(--primary); }
+.dot.red { background: var(--expense); }
+
+.recent-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.recent-card li { display: flex; justify-content: space-between; font-size: 13px; gap: 8px; }
+.recent-card li strong { white-space: nowrap; }
+
+.auth-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.auth-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+.auth-card label { display: block; font-size: 12px; margin: 10px 0 4px; }
+.auth-card input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font: inherit;
+}
+.auth-card button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 11px;
+  border: none;
+  border-radius: 9px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.auth-card button:hover { background: var(--primary-dark); }
+.link { margin-top: 12px; font-size: 12px; color: var(--muted); text-align: center; }
+.link a { color: var(--primary); font-weight: bold; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .panel-grid, .auth-preview { grid-template-columns: 1fr; }
+}
